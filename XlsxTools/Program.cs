@@ -2,7 +2,7 @@
 using System.Data;
 using System.IO;
 
-namespace XlsxToLua
+namespace XlsxTools
 {
     public class XlsxTool
     {
@@ -69,7 +69,7 @@ namespace XlsxToLua
                 if (list.Count > kvMap.Key)
                 {
                     rsList[kvMap.Value] = list[kvMap.Key];
-                }
+                } 
                 else
                 {
                     Console.Write($"原表数据映射 列数 不存在");

@@ -3,6 +3,7 @@ using NPOI.SS.UserModel;
 using NPOI.XSSF.UserModel;
 using NPOI.XSSF.Streaming;
 
+namespace XlsxTools;
 public class ExcelUtils
 {
     public enum ReadSheetType
