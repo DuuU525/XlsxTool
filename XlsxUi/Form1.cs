@@ -130,15 +130,23 @@ public partial class Form1 : Form
     /// <exception cref="NotImplementedException"></exception>
     private void btnCollect_Click(object sender, EventArgs e)
     {
-        var keyMap = GetKeyAndDicColums();
-        var pathAim = dicAimXlsx[listBox1.Items[listBox1.SelectedIndex].ToString()];
-        //选中的元数据
-        foreach (var tChecked in CheckListXlsxes.CheckedItems)
+        try
         {
-            var pathOld = dicXlsxInCheckBox[tChecked.ToString()];
-            XlsxTool.CopyTableAllSheet2OneTable(pathOld, pathAim, keyMap.dicMap);
+            var keyMap = GetKeyAndDicColums();
+            var pathAim = dicAimXlsx[listBox1.Items[listBox1.SelectedIndex].ToString()];
+            //选中的元数据
+            foreach (var tChecked in CheckListXlsxes.CheckedItems)
+            {
+                var pathOld = dicXlsxInCheckBox[tChecked.ToString()];
+                XlsxTool.CopyTableAllSheet2OneTable(pathOld, pathAim, keyMap.dicMap);
+            }
+        }
+        catch (Exception exception)
+        {
+            MessageBox.Show(exception.ToString());
         }
     }
+
     /// <summary>
     /// 对比功能
     /// </summary>
@@ -147,10 +155,17 @@ public partial class Form1 : Form
     /// <exception cref="NotImplementedException"></exception>
     private void btnCompare_Click(object sender, EventArgs e)
     {
-        var keyMap = GetKeyAndDicColums();
-        var pathOld = dicXlsxInCheckBox[CheckListXlsxes.CheckedItems[0].ToString()];
-        var pathAim = dicAimXlsx[listBox1.Items[listBox1.SelectedIndex].ToString()];
-        XlsxTool.CompareTableValue(pathOld, keyMap.keyOld, pathAim, keyMap.keyAim, keyMap.dicMap);
+        try
+        {
+            var keyMap = GetKeyAndDicColums();
+            var pathOld = dicXlsxInCheckBox[CheckListXlsxes.CheckedItems[0].ToString()];
+            var pathAim = dicAimXlsx[listBox1.Items[listBox1.SelectedIndex].ToString()];
+            XlsxTool.CompareTableValue(pathOld, keyMap.keyOld, pathAim, keyMap.keyAim, keyMap.dicMap);
+        }
+        catch (Exception exception)
+        {
+            MessageBox.Show(exception.ToString());
+        }
     }
 
     private (int keyOld, int keyAim, Dictionary<int, int> dicMap) GetKeyAndDicColums()
