@@ -130,13 +130,14 @@ public partial class Form1 : Form
     /// <exception cref="NotImplementedException"></exception>
     private void btnCollect_Click(object sender, EventArgs e)
     {
+        var keyMap = GetKeyAndDicColums();
+        var pathAim = dicAimXlsx[listBox1.Items[listBox1.SelectedIndex].ToString()];
         //选中的元数据
         foreach (var tChecked in CheckListXlsxes.CheckedItems)
         {
-            Console.WriteLine($"Meta:" + tChecked.ToString() + $"   {dicXlsxInCheckBox[tChecked.ToString()]}");
+            var pathOld = dicXlsxInCheckBox[tChecked.ToString()];
+            XlsxTool.CopyTableAllSheet2OneTable(pathOld, pathAim, keyMap.dicMap);
         }
-        var fileName = listBox1.Items[listBox1.SelectedIndex].ToString();
-        Console.WriteLine($"Aim:" + fileName.ToString());
     }
     /// <summary>
     /// 对比功能
@@ -146,7 +147,27 @@ public partial class Form1 : Form
     /// <exception cref="NotImplementedException"></exception>
     private void btnCompare_Click(object sender, EventArgs e)
     {
-        
+        var keyMap = GetKeyAndDicColums();
+        var pathOld = dicXlsxInCheckBox[CheckListXlsxes.CheckedItems[0].ToString()];
+        var pathAim = dicAimXlsx[listBox1.Items[listBox1.SelectedIndex].ToString()];
+        XlsxTool.CompareTableValue(pathOld, keyMap.keyOld, pathAim, keyMap.keyAim, keyMap.dicMap);
     }
 
+    private (int keyOld, int keyAim, Dictionary<int, int> dicMap) GetKeyAndDicColums()
+    {
+        Dictionary<int, int> dicMap = new();
+        var columsOld = tbOldColums.Text.Split(',');
+        var columsAim = tbAimColums.Text.Split(',');
+        for (int i = 0; i < columsOld.Length; i++)
+        {
+            if (int.TryParse(columsOld[i], out var rsOld))
+            {
+                if (columsAim.Length > i && int.TryParse(columsAim[i], out var rsAim))
+                {
+                    dicMap.Add(rsOld, rsAim);
+                }
+            }
+        }
+        return (int.Parse(tbOldKey.Text), int.Parse(tbAimKey.Text), dicMap);
+    }
 }

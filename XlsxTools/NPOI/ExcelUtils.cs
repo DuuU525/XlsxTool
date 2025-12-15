@@ -72,6 +72,7 @@ public class ExcelUtils
                     ICell cell = row.GetCell(j);
                     string value = cell?.ToString() ?? "";
                     // Console.Write(value + "\t");
+                    value = value.ToLower().Trim();
                     cellValues.Add(value);
                 }
 

@@ -24,21 +24,21 @@ namespace XlsxTools
         public static void CopyTableAllSheet2OneTable(string pathIn = "", string pathOut = "", Dictionary<int, int> map = null)
         {
             #region test
-            string pathInA = Path.Combine("H:\\Apps\\Project_Xlsx", "2_运作表2025.xlsx");
-            string pathOutC = Path.Combine("H:\\Apps\\Project_Xlsx", "result.xlsx");
-            Dictionary<int, int> columnMap = new Dictionary<int, int>();//表中列的映射关系
-            columnMap.Add(0, 2);
-            columnMap.Add(1, 4);
-            columnMap.Add(2, 6);
-            columnMap.Add(3, 1);
-
-            pathIn = pathInA;
-            pathOut = pathOutC;
-            map = columnMap;
+            // string pathInA = Path.Combine("H:\\Apps\\Project_Xlsx", "2_运作表2025.xlsx");
+            // string pathOutC = Path.Combine("H:\\Apps\\Project_Xlsx", "result.xlsx");
+            // Dictionary<int, int> columnMap = new Dictionary<int, int>();//表中列的映射关系
+            // columnMap.Add(0, 2);
+            // columnMap.Add(1, 4);
+            // columnMap.Add(2, 6);
+            // columnMap.Add(3, 1);
+            //
+            // pathIn = pathInA;
+            // pathOut = pathOutC;
+            // map = columnMap;
             #endregion
 
             Job1_Step1(pathIn, pathOut, map);
-            Console.WriteLine("Finish");
+            Console.WriteLine("Finish Copy");
         }
         /// <summary>
         /// 读取原表
@@ -100,13 +100,13 @@ namespace XlsxTools
         {
             #region Test
 
-            pathA = Path.Combine("H:\\Apps\\XlsxTool\\Datas", "A.xlsx");
-            pathB = Path.Combine("H:\\Apps\\XlsxTool\\Datas", "result.xlsx");
-            indexKeyA = 0;
-            indexKeyB = 2;
-            map = new Dictionary<int, int>();//表中列的映射关系
-            map.Add(3, 1);
-            map.Add(1, 4);
+            // pathA = Path.Combine("H:\\Apps\\XlsxTool\\Datas", "A.xlsx");
+            // pathB = Path.Combine("H:\\Apps\\XlsxTool\\Datas", "result.xlsx");
+            // indexKeyA = 0;
+            // indexKeyB = 2;
+            // map = new Dictionary<int, int>();//表中列的映射关系
+            // map.Add(3, 1);
+            // map.Add(1, 4);
 
             #endregion
             Dictionary<string, List<string>> dictA = new();
@@ -164,6 +164,7 @@ namespace XlsxTools
             
             ExcelUtils.WriteExcelColor(pathA, ExcelUtils.ReadSheetType.All, indexKeyA, dictWarmingA);
             ExcelUtils.WriteExcelColor(pathB, ExcelUtils.ReadSheetType.All, indexKeyB, dictWarmingB);
+            Console.Write($"Finish Compare");
         }
 
 

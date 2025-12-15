@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("XlsxTools")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0d3dd4a7bbb90804ca9fe9587ca51e86b6fd5de4")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3d0de472a099f19fdcfcaeb1eac6da7526662fba")]
 [assembly: System.Reflection.AssemblyProductAttribute("XlsxTools")]
 [assembly: System.Reflection.AssemblyTitleAttribute("XlsxTools")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
