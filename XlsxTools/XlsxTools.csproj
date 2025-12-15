@@ -12,4 +12,10 @@
     <PackageReference Include="NPOI" Version="2.7.5" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Reference Include="System.Windows.Forms">
+      <HintPath>C:\Users\Administrator\.dotnet\shared\Microsoft.WindowsDesktop.App\8.0.22\System.Windows.Forms.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
 </Project>

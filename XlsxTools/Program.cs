@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Data;
 using System.IO;
+using System.Windows.Forms;
 
 namespace XlsxTools
 {
@@ -38,7 +39,7 @@ namespace XlsxTools
             #endregion
 
             Job1_Step1(pathIn, pathOut, map);
-            Console.WriteLine("Finish Copy");
+            MessageBox.Show($"完成汇总功能");
         }
         /// <summary>
         /// 读取原表
@@ -165,6 +166,7 @@ namespace XlsxTools
             ExcelUtils.WriteExcelColor(pathA, ExcelUtils.ReadSheetType.All, indexKeyA, dictWarmingA);
             ExcelUtils.WriteExcelColor(pathB, ExcelUtils.ReadSheetType.All, indexKeyB, dictWarmingB);
             Console.Write($"Finish Compare");
+            MessageBox.Show($"完成对比功能");
         }
 
 

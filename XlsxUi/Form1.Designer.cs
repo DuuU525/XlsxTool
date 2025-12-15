@@ -110,7 +110,7 @@ partial class Form1
         label1.Name = "label1";
         label1.Size = new System.Drawing.Size(346, 22);
         label1.TabIndex = 6;
-        label1.Text = "Key(原表key所在列序号)";
+        label1.Text = "Key(原表key所在列序号: A-0，B-1 只填序号0)";
         // 
         // label2
         // 
@@ -118,7 +118,7 @@ partial class Form1
         label2.Name = "label2";
         label2.Size = new System.Drawing.Size(345, 29);
         label2.TabIndex = 7;
-        label2.Text = "原表列序号";
+        label2.Text = "原表列序号(序列0,序列2：只填0,2)";
         // 
         // label3
         // 
@@ -126,7 +126,7 @@ partial class Form1
         label3.Name = "label3";
         label3.Size = new System.Drawing.Size(373, 18);
         label3.TabIndex = 8;
-        label3.Text = "Key(目标表key所在列序号)";
+        label3.Text = "Key(目标表key所在列序号: A-0，B-1 只填序号1)";
         // 
         // label4
         // 
@@ -134,7 +134,7 @@ partial class Form1
         label4.Name = "label4";
         label4.Size = new System.Drawing.Size(372, 28);
         label4.TabIndex = 9;
-        label4.Text = "目标表列序号";
+        label4.Text = "目标表列序号(序列1,序列3：英文逗号隔开只填1,3)";
         // 
         // tbOldKey
         // 
@@ -183,7 +183,7 @@ partial class Form1
         Controls.Add(CheckListXlsxes);
         Controls.Add(btnAimXlsx);
         Controls.Add(btnSelectPath);
-        Text = "Form1";
+        Text = "Xlsx Tool";
         ResumeLayout(false);
         PerformLayout();
     }
