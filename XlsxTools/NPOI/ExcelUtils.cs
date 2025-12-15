@@ -194,7 +194,7 @@ public class ExcelUtils
         
         #region Style
         ICellStyle style = workbook.CreateCellStyle();
-        style.FillForegroundColor = IndexedColors.Yellow.Index; // 背景色
+        style.FillForegroundColor = IndexedColors.Red.Index; // 背景色
         style.FillPattern = FillPattern.SolidForeground;        // 填充模式
         #endregion
 

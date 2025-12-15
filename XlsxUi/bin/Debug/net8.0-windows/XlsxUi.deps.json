@@ -6,12 +6,12 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v8.0": {
-      "UIForm/1.0.0": {
+      "XlsxUi/1.0.0": {
         "dependencies": {
           "XlsxTools": "1.0.0"
         },
         "runtime": {
-          "UIForm.dll": {}
+          "XlsxUi.dll": {}
         }
       },
       "BouncyCastle.Cryptography/2.4.0": {
@@ -179,7 +179,7 @@
     }
   },
   "libraries": {
-    "UIForm/1.0.0": {
+    "XlsxUi/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

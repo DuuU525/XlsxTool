@@ -8,6 +8,9 @@ namespace XlsxTools
     {
         static int Main(string[] args)
         {
+            Console.WriteLine("start");
+            CopyTableAllSheet2OneTable();
+            // CompareTableValue();
             return 0;
         }
 
@@ -21,8 +24,8 @@ namespace XlsxTools
         public static void CopyTableAllSheet2OneTable(string pathIn = "", string pathOut = "", Dictionary<int, int> map = null)
         {
             #region test
-            string pathInA = Path.Combine("E:\\_LxsUnityWorks\\_Hybrid\\XlsxTools\\Datas", "A.xlsx");
-            string pathOutC = Path.Combine("E:\\_LxsUnityWorks\\_Hybrid\\XlsxTools\\Datas", "C.xlsx");
+            string pathInA = Path.Combine("H:\\Apps\\Project_Xlsx", "2_运作表2025.xlsx");
+            string pathOutC = Path.Combine("H:\\Apps\\Project_Xlsx", "result.xlsx");
             Dictionary<int, int> columnMap = new Dictionary<int, int>();//表中列的映射关系
             columnMap.Add(0, 2);
             columnMap.Add(1, 4);
@@ -35,7 +38,7 @@ namespace XlsxTools
             #endregion
 
             Job1_Step1(pathIn, pathOut, map);
-            Console.Write("Finish");
+            Console.WriteLine("Finish");
         }
         /// <summary>
         /// 读取原表
@@ -97,8 +100,8 @@ namespace XlsxTools
         {
             #region Test
 
-            pathA = Path.Combine("E:\\_LxsUnityWorks\\_Hybrid\\XlsxTools\\Datas", "A.xlsx");
-            pathB = Path.Combine("E:\\_LxsUnityWorks\\_Hybrid\\XlsxTools\\Datas", "C.xlsx");
+            pathA = Path.Combine("H:\\Apps\\XlsxTool\\Datas", "A.xlsx");
+            pathB = Path.Combine("H:\\Apps\\XlsxTool\\Datas", "result.xlsx");
             indexKeyA = 0;
             indexKeyB = 2;
             map = new Dictionary<int, int>();//表中列的映射关系

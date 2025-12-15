@@ -734,11 +734,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "H:\\Apps\\XlsxTool\\UIForm\\UIForm.csproj",
-      "projectName": "UIForm",
-      "projectPath": "H:\\Apps\\XlsxTool\\UIForm\\UIForm.csproj",
+      "projectUniqueName": "H:\\Apps\\XlsxTool\\XlsxUi\\XlsxUi.csproj",
+      "projectName": "XlsxUi",
+      "projectPath": "H:\\Apps\\XlsxTool\\XlsxUi\\XlsxUi.csproj",
       "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-      "outputPath": "H:\\Apps\\XlsxTool\\UIForm\\obj\\",
+      "outputPath": "H:\\Apps\\XlsxTool\\XlsxUi\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "E:\\Tools\\Vs2022\\Share\\NuGetPackages"

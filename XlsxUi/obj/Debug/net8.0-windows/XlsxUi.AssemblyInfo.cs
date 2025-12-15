@@ -10,12 +10,12 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("UIForm")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("XlsxUi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c4c7169c6551c6f202a91bb82e5fddd789e02062")]
-[assembly: System.Reflection.AssemblyProductAttribute("UIForm")]
-[assembly: System.Reflection.AssemblyTitleAttribute("UIForm")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0d3dd4a7bbb90804ca9fe9587ca51e86b6fd5de4")]
+[assembly: System.Reflection.AssemblyProductAttribute("XlsxUi")]
+[assembly: System.Reflection.AssemblyTitleAttribute("XlsxUi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
 [assembly: System.Runtime.Versioning.TargetPlatformAttribute("Windows7.0")]
 [assembly: System.Runtime.Versioning.SupportedOSPlatformAttribute("Windows7.0")]

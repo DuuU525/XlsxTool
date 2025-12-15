@@ -1,4 +1,4 @@
-namespace UIForm;
+namespace XlsxUi;
 
 static class Program
 {
