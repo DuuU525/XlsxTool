@@ -134,7 +134,7 @@ partial class Form1
         label4.Name = "label4";
         label4.Size = new System.Drawing.Size(372, 28);
         label4.TabIndex = 9;
-        label4.Text = "目标表列序号(序列1,序列3：英文逗号隔开只填1,3)";
+        label4.Text = "目标表列序号(序列1,序列3：小数点隔开只填1,3)";
         // 
         // tbOldKey
         // 

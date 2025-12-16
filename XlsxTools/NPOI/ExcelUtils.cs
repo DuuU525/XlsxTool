@@ -208,7 +208,7 @@ public class ExcelUtils
                 
                 ICell cellKey = row.GetCell(keyIdx);
                 string cellValue = cellKey?.ToString().ToLower().Trim();
-                if (!dictWarming.TryGetValue(cellValue, out var rsList)) continue;
+                if (string.IsNullOrEmpty(cellValue) || !dictWarming.TryGetValue(cellValue, out var rsList)) continue;
                 
                 for (int j = 0; j < rsList.Count; j++)
                 {
